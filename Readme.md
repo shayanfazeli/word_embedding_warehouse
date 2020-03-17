@@ -3,6 +3,7 @@ __author__: Shayan Fazeli (shayan@cs.ucla.edu)
 
 ### Introdcution
 This application helps you with building the embedding warehouse (BERT-based, mainly) to be used in natural language tasks.
+It is part of a bigger ERLab Project (Project DiagNote).
 
 ### Installation
 Clone this github repository and run:
