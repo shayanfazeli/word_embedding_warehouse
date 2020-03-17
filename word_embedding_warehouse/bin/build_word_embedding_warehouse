@@ -21,7 +21,7 @@ def main(args: argparse.Namespace) -> None:
         download_links_file=os.path.abspath(os.path.join(os.path.dirname(__file__), '../configuration.json')),
         clear_cache=(args.clear_cache == 1)
     )
-    builder.b
+    builder.build_warehouse()
 
 
 if __name__ == "__main__":
