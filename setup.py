@@ -19,7 +19,7 @@ setup(
     packages=find_packages(),
     python_requires='>3.6.0',
     scripts=[
-        'bin/build_word_embedding_warehouse',
+        'word_embedding_warehouse/bin/build_word_embedding_warehouse',
     ],
     install_requires=[
         'numpy>=1.16.4',
