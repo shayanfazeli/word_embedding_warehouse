@@ -1,0 +1,414 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+    <title>word_embedding_warehouse.library package &#8212; Word Embedding Warehouse v1.0.0 documentation</title>
+
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.3.1-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinxbootstrap4.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/sphinxbootstrap4.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="word_embedding_warehouse.bin package" href="word_embedding_warehouse.bin.html" /> 
+  </head><body>
+  <nav class="navbar navbar-expand-md  fixed-top navbar-dark bg-inverse flex-wrap">
+    <button class="navbar-toggler ml-auto py-2" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
+      &#9776;
+    </button>
+      <div class="navbar-collapse collapse" id="exCollapsingNavbar2">
+           <a class="navbar-brand py-1" href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Word Embedding Warehouse"/>
+          </a>
+          <ul class="navbar-nav mr-auto">
+          
+              <li class="nav-item dropdown d-none d-sm-block" id="navbar-pages">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                  <ul class="dropdown-menu">
+                  <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">word_embedding_warehouse</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="word_embedding_warehouse.html">word_embedding_warehouse package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="word_embedding_warehouse.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="word_embedding_warehouse.bin.html">word_embedding_warehouse.bin package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">word_embedding_warehouse.library package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="word_embedding_warehouse.html#module-word_embedding_warehouse">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="word_embedding_warehouse.bin.html">word_embedding_warehouse.bin package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="word_embedding_warehouse.bin.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="word_embedding_warehouse.bin.html#module-word_embedding_warehouse.bin.build_word_embedding_warehouse">word_embedding_warehouse.bin.build_word_embedding_warehouse module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="word_embedding_warehouse.bin.html#module-word_embedding_warehouse.bin">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">word_embedding_warehouse.library package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-word_embedding_warehouse.library.downloading">word_embedding_warehouse.library.downloading module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-word_embedding_warehouse.library.embedding_builder">word_embedding_warehouse.library.embedding_builder module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-word_embedding_warehouse.library.files_and_folders">word_embedding_warehouse.library.files_and_folders module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-word_embedding_warehouse.library">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="word_embedding_warehouse.html">word_embedding_warehouse package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="word_embedding_warehouse.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="word_embedding_warehouse.bin.html">word_embedding_warehouse.bin package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="word_embedding_warehouse.bin.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="word_embedding_warehouse.bin.html#module-word_embedding_warehouse.bin.build_word_embedding_warehouse">word_embedding_warehouse.bin.build_word_embedding_warehouse module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="word_embedding_warehouse.bin.html#module-word_embedding_warehouse.bin">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">word_embedding_warehouse.library package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-word_embedding_warehouse.library.downloading">word_embedding_warehouse.library.downloading module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-word_embedding_warehouse.library.embedding_builder">word_embedding_warehouse.library.embedding_builder module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-word_embedding_warehouse.library.files_and_folders">word_embedding_warehouse.library.files_and_folders module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-word_embedding_warehouse.library">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="word_embedding_warehouse.html#module-word_embedding_warehouse">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+                  </ul>
+              </li>
+              <li class="nav-item">
+              <a  class="nav-link" href="../index.html">Home</a></li>
+              <li class="nav-item">
+              
+                  <a  class="nav-link" href="http://example.com">Link</a></li>
+          </ul>
+          <div class="dropdown-divider d-block d-sm-none mb-4"></div>
+             
+<form class="form-inline" action="../search.html" method="get">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <!--<div class="row hidden-sm-up">
+          <div class="collapse navbar-toggleable-xs container" id="exCollapsingNavbar2">
+              <div class="container">
+             　　 <a class="navbar-brand" href="../index.html">
+                      <img class="logo" src="../_static/logo.png" alt="Word Embedding Warehouse"/>
+                  </a>
+              </div>
+              <ul class="nav navbar-nav">
+                  <li>
+                  <a  class="nav-link" href="../index.html">Home</a></li>
+                  <li>
+                  
+                      <a  class="nav-link" href="http://example.com">Link</a></li>
+              </ul>
+              <div class="dropdown-divider"></div>
+              <div class="navbar-text">search<div>
+              
+<form class="form-inline" action="../search.html" method="get">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          </div>
+      </div>-->
+    </nav>
+  </div>
+
+    <div class="related d-flex justify-content-between bg-light flex-wrap" role="navigation" aria-label="related navigation">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../index.html">Word Embedding Warehouse v1.0.0 documentation</a></li>
+                <li class="breadcrumb-item"><a href="modules.html"
+                       >word_embedding_warehouse</a></li>
+                <li class="breadcrumb-item"><a href="word_embedding_warehouse.html"
+                       
+                         accesskey="U"
+                         class="active"
+                       >word_embedding_warehouse package</a></li>
+            <li class="breadcrumb-item active">word_embedding_warehouse.library package</li>
+        </ol>
+       <div>
+          <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+               <a href="word_embedding_warehouse.bin.html" title="Previous Chapter: word_embedding_warehouse.bin package" class="btn btn-primary" role="botton" accesskey="P">
+                   &laquo; word_embeddin...
+               </a>
+           </div>
+       </div>
+    </div>
+
+  <div class="main container-fluid">
+    <div class="row"> 
+      <div class="sphinxsidebar d-none d-md-block">
+        <div class="sphinxsidebarwrapper">          
+            <h4>Table Of Contents</h4>
+            
+            
+              <div class="sidebartoctree">
+                <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">word_embedding_warehouse</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="word_embedding_warehouse.html">word_embedding_warehouse package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="word_embedding_warehouse.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="word_embedding_warehouse.bin.html">word_embedding_warehouse.bin package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">word_embedding_warehouse.library package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="word_embedding_warehouse.html#module-word_embedding_warehouse">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="word_embedding_warehouse.bin.html">word_embedding_warehouse.bin package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="word_embedding_warehouse.bin.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="word_embedding_warehouse.bin.html#module-word_embedding_warehouse.bin.build_word_embedding_warehouse">word_embedding_warehouse.bin.build_word_embedding_warehouse module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="word_embedding_warehouse.bin.html#module-word_embedding_warehouse.bin">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">word_embedding_warehouse.library package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-word_embedding_warehouse.library.downloading">word_embedding_warehouse.library.downloading module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-word_embedding_warehouse.library.embedding_builder">word_embedding_warehouse.library.embedding_builder module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-word_embedding_warehouse.library.files_and_folders">word_embedding_warehouse.library.files_and_folders module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-word_embedding_warehouse.library">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="word_embedding_warehouse.html">word_embedding_warehouse package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="word_embedding_warehouse.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="word_embedding_warehouse.bin.html">word_embedding_warehouse.bin package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="word_embedding_warehouse.bin.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="word_embedding_warehouse.bin.html#module-word_embedding_warehouse.bin.build_word_embedding_warehouse">word_embedding_warehouse.bin.build_word_embedding_warehouse module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="word_embedding_warehouse.bin.html#module-word_embedding_warehouse.bin">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">word_embedding_warehouse.library package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-word_embedding_warehouse.library.downloading">word_embedding_warehouse.library.downloading module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-word_embedding_warehouse.library.embedding_builder">word_embedding_warehouse.library.embedding_builder module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-word_embedding_warehouse.library.files_and_folders">word_embedding_warehouse.library.files_and_folders module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-word_embedding_warehouse.library">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="word_embedding_warehouse.html#module-word_embedding_warehouse">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            
+          
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="word_embedding_warehouse.bin.html"
+                        title="previous chapter">word_embedding_warehouse.bin package</a></p>
+<div id="searchbox" style="display: none">
+    <form class="form search" action="../search.html" method="get">
+      <input type="text" name="q" class="form-control" placeholder="Search..." />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+
+<script type="text/javascript">$('#searchbox').show(0);</script>
+  <ul class="this-page-menu list-unstyled text-right">
+    <li><a href="../_sources/api/word_embedding_warehouse.library.rst.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+        </div>
+      </div> 
+
+      <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="word-embedding-warehouse-library-package">
+<h1>word_embedding_warehouse.library package<a class="headerlink" href="#word-embedding-warehouse-library-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-word_embedding_warehouse.library.downloading">
+<span id="word-embedding-warehouse-library-downloading-module"></span><h2>word_embedding_warehouse.library.downloading module<a class="headerlink" href="#module-word_embedding_warehouse.library.downloading" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="word_embedding_warehouse.library.downloading.download_file_to_path">
+<code class="sig-prename descclassname">word_embedding_warehouse.library.downloading.</code><code class="sig-name descname">download_file_to_path</code><span class="sig-paren">(</span><em class="sig-param">file_link: str</em>, <em class="sig-param">path: str</em>, <em class="sig-param">output_file_name: str = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#word_embedding_warehouse.library.downloading.download_file_to_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>The file downloader method, <cite>download_file_to_path</cite>, (which is inspired by a stackoverflow post which unfortunately
+I do not recall the address, and could not find it again). It also includes the progress bar and other 
+functionalities.</p>
+<dl class="simple">
+<dt>file_link: <cite>str</cite>, required</dt><dd><p>The file download link is set in this parameter.</p>
+</dd>
+<dt>path: <cite>str</cite>, required</dt><dd><p>The folder for the file to be downloaded to.</p>
+</dd>
+<dt>output_file_name: <cite>str</cite>, optional (default=None)</dt><dd><p>This is the output file name which enforces renaming if specified.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-word_embedding_warehouse.library.embedding_builder">
+<span id="word-embedding-warehouse-library-embedding-builder-module"></span><h2>word_embedding_warehouse.library.embedding_builder module<a class="headerlink" href="#module-word_embedding_warehouse.library.embedding_builder" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="word_embedding_warehouse.library.embedding_builder.WordEmbeddingWarehouseBuilder">
+<em class="property">class </em><code class="sig-prename descclassname">word_embedding_warehouse.library.embedding_builder.</code><code class="sig-name descname">WordEmbeddingWarehouseBuilder</code><span class="sig-paren">(</span><em class="sig-param">output_path: str = None</em>, <em class="sig-param">download_links_file: str = None</em>, <em class="sig-param">clear_cache: bool = False</em><span class="sig-paren">)</span><a class="headerlink" href="#word_embedding_warehouse.library.embedding_builder.WordEmbeddingWarehouseBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class provides a considerably user-friendly interface for the user to fetch, build, convert to pytorch weights, and
+process almost every well-known word-embedding, in all their variants.</p>
+<p>This class is the main agent to be used for word-embedding warehouse building. To use,
+instantiate it and run the <cite>build_warehouse</cite> method with no arguments.</p>
+<dl class="method">
+<dt id="word_embedding_warehouse.library.embedding_builder.WordEmbeddingWarehouseBuilder.build_bert_warehouse">
+<code class="sig-name descname">build_bert_warehouse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#word_embedding_warehouse.library.embedding_builder.WordEmbeddingWarehouseBuilder.build_bert_warehouse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Embedding family builder</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="word_embedding_warehouse.library.embedding_builder.WordEmbeddingWarehouseBuilder.build_biobert_warehouse">
+<code class="sig-name descname">build_biobert_warehouse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#word_embedding_warehouse.library.embedding_builder.WordEmbeddingWarehouseBuilder.build_biobert_warehouse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Embedding family builder</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="word_embedding_warehouse.library.embedding_builder.WordEmbeddingWarehouseBuilder.build_elmo_warehouse">
+<code class="sig-name descname">build_elmo_warehouse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#word_embedding_warehouse.library.embedding_builder.WordEmbeddingWarehouseBuilder.build_elmo_warehouse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Embedding family builder</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="word_embedding_warehouse.library.embedding_builder.WordEmbeddingWarehouseBuilder.build_glove_warehouse">
+<code class="sig-name descname">build_glove_warehouse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#word_embedding_warehouse.library.embedding_builder.WordEmbeddingWarehouseBuilder.build_glove_warehouse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Embedding family builder</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="word_embedding_warehouse.library.embedding_builder.WordEmbeddingWarehouseBuilder.build_ncbibert_warehouse">
+<code class="sig-name descname">build_ncbibert_warehouse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#word_embedding_warehouse.library.embedding_builder.WordEmbeddingWarehouseBuilder.build_ncbibert_warehouse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Embedding family builder</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="word_embedding_warehouse.library.embedding_builder.WordEmbeddingWarehouseBuilder.build_warehouse">
+<code class="sig-name descname">build_warehouse</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#word_embedding_warehouse.library.embedding_builder.WordEmbeddingWarehouseBuilder.build_warehouse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Embedding warehouse builder for all families and all variants that are specified in this platform.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="word_embedding_warehouse.library.embedding_builder.WordEmbeddingWarehouseBuilder.convert_all_tensorflow_bert_weights_to_pytorch">
+<code class="sig-name descname">convert_all_tensorflow_bert_weights_to_pytorch</code><span class="sig-paren">(</span><em class="sig-param">input_folder: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#word_embedding_warehouse.library.embedding_builder.WordEmbeddingWarehouseBuilder.convert_all_tensorflow_bert_weights_to_pytorch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tensorflow to Pytorch weight conversion based on huggingface’s library</p>
+<dl class="simple">
+<dt>input_folder: <cite>str</cite>, required</dt><dd><p>The folder containing the tensorflow files</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="word_embedding_warehouse.library.embedding_builder.WordEmbeddingWarehouseBuilder.fetch_all_models_for_all_embeddings">
+<code class="sig-name descname">fetch_all_models_for_all_embeddings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#word_embedding_warehouse.library.embedding_builder.WordEmbeddingWarehouseBuilder.fetch_all_models_for_all_embeddings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetching all of the model families can take place by using <a class="reference internal" href="#word_embedding_warehouse.library.embedding_builder.WordEmbeddingWarehouseBuilder.fetch_all_models_for_all_embeddings" title="word_embedding_warehouse.library.embedding_builder.WordEmbeddingWarehouseBuilder.fetch_all_models_for_all_embeddings"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fetch_all_models_for_all_embeddings()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="word_embedding_warehouse.library.embedding_builder.WordEmbeddingWarehouseBuilder.fetch_bert_files">
+<code class="sig-name descname">fetch_bert_files</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#word_embedding_warehouse.library.embedding_builder.WordEmbeddingWarehouseBuilder.fetch_bert_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Embedding Family Fetcher Method</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="word_embedding_warehouse.library.embedding_builder.WordEmbeddingWarehouseBuilder.fetch_biobert_files">
+<code class="sig-name descname">fetch_biobert_files</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#word_embedding_warehouse.library.embedding_builder.WordEmbeddingWarehouseBuilder.fetch_biobert_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Embedding Family Fetcher Method</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="word_embedding_warehouse.library.embedding_builder.WordEmbeddingWarehouseBuilder.fetch_elmo_files">
+<code class="sig-name descname">fetch_elmo_files</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#word_embedding_warehouse.library.embedding_builder.WordEmbeddingWarehouseBuilder.fetch_elmo_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Embedding Family Fetcher Method</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="word_embedding_warehouse.library.embedding_builder.WordEmbeddingWarehouseBuilder.fetch_glove_files">
+<code class="sig-name descname">fetch_glove_files</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#word_embedding_warehouse.library.embedding_builder.WordEmbeddingWarehouseBuilder.fetch_glove_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Embedding Family Fetcher Method</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="word_embedding_warehouse.library.embedding_builder.WordEmbeddingWarehouseBuilder.fetch_ncbibert_files">
+<code class="sig-name descname">fetch_ncbibert_files</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#word_embedding_warehouse.library.embedding_builder.WordEmbeddingWarehouseBuilder.fetch_ncbibert_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Embedding Family Fetcher Method</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-word_embedding_warehouse.library.files_and_folders">
+<span id="word-embedding-warehouse-library-files-and-folders-module"></span><h2>word_embedding_warehouse.library.files_and_folders module<a class="headerlink" href="#module-word_embedding_warehouse.library.files_and_folders" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="word_embedding_warehouse.library.files_and_folders.erase_file_if_exists">
+<code class="sig-prename descclassname">word_embedding_warehouse.library.files_and_folders.</code><code class="sig-name descname">erase_file_if_exists</code><span class="sig-paren">(</span><em class="sig-param">file_path: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#word_embedding_warehouse.library.files_and_folders.erase_file_if_exists" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference internal" href="#word_embedding_warehouse.library.files_and_folders.erase_file_if_exists" title="word_embedding_warehouse.library.files_and_folders.erase_file_if_exists"><code class="xref py py-func docutils literal notranslate"><span class="pre">erase_file_if_exists()</span></code></a> method receives a file_path and erases it if it exists.</p>
+<dl class="simple">
+<dt>file_path: <cite>str</cite>, required</dt><dd><p>The path to the file</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="word_embedding_warehouse.library.files_and_folders.force_folder_to_exist">
+<code class="sig-prename descclassname">word_embedding_warehouse.library.files_and_folders.</code><code class="sig-name descname">force_folder_to_exist</code><span class="sig-paren">(</span><em class="sig-param">folder_path: str</em>, <em class="sig-param">erase_if_exist: bool = False</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#word_embedding_warehouse.library.files_and_folders.force_folder_to_exist" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference internal" href="#word_embedding_warehouse.library.files_and_folders.force_folder_to_exist" title="word_embedding_warehouse.library.files_and_folders.force_folder_to_exist"><code class="xref py py-func docutils literal notranslate"><span class="pre">force_folder_to_exist()</span></code></a> forces a string folder to exist.</p>
+<dl class="simple">
+<dt>folder_path: <cite>str</cite>, required</dt><dd><p>The path to the folder, which might not exist.</p>
+</dd>
+<dt>erase_if_exist: <cite>bool</cite>, optional (default=False)</dt><dd><p>The variable that decides to erase the folder if it already exists (on macOS and Linux).</p>
+</dd>
+</dl>
+<p>The absolute path to the requested folder.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="word_embedding_warehouse.library.files_and_folders.keep_or_delete_file">
+<code class="sig-prename descclassname">word_embedding_warehouse.library.files_and_folders.</code><code class="sig-name descname">keep_or_delete_file</code><span class="sig-paren">(</span><em class="sig-param">file_path: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#word_embedding_warehouse.library.files_and_folders.keep_or_delete_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method receives a file_path and interactively gives the user the option to keep or delete it.</p>
+<dl class="simple">
+<dt>file_path: <cite>str</cite>, required</dt><dd><p>The path to the file</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-word_embedding_warehouse.library">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-word_embedding_warehouse.library" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="clearer"></div>
+      </div>
+    </div>
+
+
+  </body>
+</html>

@@ -1,0 +1,22 @@
+word\_embedding\_warehouse.bin package
+======================================
+
+Submodules
+----------
+
+word\_embedding\_warehouse.bin.build\_word\_embedding\_warehouse module
+-----------------------------------------------------------------------
+
+.. automodule:: word_embedding_warehouse.bin.build_word_embedding_warehouse
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: word_embedding_warehouse.bin
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,38 @@
+word\_embedding\_warehouse.library package
+==========================================
+
+Submodules
+----------
+
+word\_embedding\_warehouse.library.downloading module
+-----------------------------------------------------
+
+.. automodule:: word_embedding_warehouse.library.downloading
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+word\_embedding\_warehouse.library.embedding\_builder module
+------------------------------------------------------------
+
+.. automodule:: word_embedding_warehouse.library.embedding_builder
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+word\_embedding\_warehouse.library.files\_and\_folders module
+-------------------------------------------------------------
+
+.. automodule:: word_embedding_warehouse.library.files_and_folders
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: word_embedding_warehouse.library
+   :members:
+   :undoc-members:
+   :show-inheritance:

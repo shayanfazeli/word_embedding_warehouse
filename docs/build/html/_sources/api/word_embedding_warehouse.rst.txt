@@ -1,0 +1,18 @@
+word\_embedding\_warehouse package
+==================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   word_embedding_warehouse.bin
+   word_embedding_warehouse.library
+
+Module contents
+---------------
+
+.. automodule:: word_embedding_warehouse
+   :members:
+   :undoc-members:
+   :show-inheritance:

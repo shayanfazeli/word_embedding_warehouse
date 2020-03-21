@@ -1,0 +1,27 @@
+Welcome to Word Embedding Warehouse's documentation!
+====================================================
+
+Welcome to the Word Embedding Warehouse documentation!
+
+This tool will assist you in providing the pretrained weights of BERT-based representations
+for both PyTorch and Tensorflow.
+
+Source code is available in `my github <https://github.com/shayanfazeli/word_embedding_warehouse>`_.
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   api/modules.rst
+   api/word_embedding_warehouse.bin.rst
+   api/word_embedding_warehouse.library.rst
+   api/word_embedding_warehouse.rst
+
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
